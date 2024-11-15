@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Assets/logo.webp">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="cart.css">
+    <title>BookNerd/cart</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <div class="brand">
+            <img id="logo" src="Assets/logo.webp"/>
+            <h2>BookNerd</h2>
+        </div>
+        <div class="pages">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="cart.html">Cart</a>
+            <div class="auth-section" id="authSection">
+                <span id="userDisplay"></span>
+                <button id="authButton" onclick="handleAuthAction()" class="auth-btn"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Container -->
+    <div class="cart-container" id="cartItems">
+        <!-- Cart items will be dynamically added here -->
+    </div>
+
+    <!-- Cart Summary -->
+    <div class="cart-summary" id="cartSummary">
+        <h2>Cart Summary</h2>
+        <div class="total">Total: ₹<span id="totalAmount">0.00</span></div>
+        <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+    <div class="footer">
+        <div class="thank">
+            <h3>Thank You for visiting the store</h3>
+        </div>
+        <div class="about">
+        <ul class="mem">
+            <li><b>Members</b></li>
+            <li>Sourav Dutta</li>
+            <li>Arghyadeep Kumar</li>
+            <li>Parijat Das</li>
+            <li>Soumodeep Ghosh</li>
+            <li>Shivam Banerjee</li>
+        </ul>
+        <ul class="mem">
+            <li><b>Members</b></li>
+            <li>Sourav Dutta</li>
+            <li>Arghyadeep Kumar</li>
+            <li>Parijat Das</li>
+            <li>Soumodeep Ghosh</li>
+            <li>Shivam Banerjee</li>
+        </ul>
+        <ul class="mem">
+            <li><b>Members</b></li>
+            <li>Sourav Dutta</li>
+            <li>Arghyadeep Kumar</li>
+            <li>Parijat Das</li>
+            <li>Soumodeep Ghosh</li>
+            <li>Shivam Banerjee</li>
+        </ul>
+
+        </div>
+        <div class="rights"><h5>@All Rights Open to Use</h5></div>
+     </div>
+    <script src="cart.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

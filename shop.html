@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Assets/logo.webp">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="home.css">
+    <title>BookNerd/shop</title>
+    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <div class="brand">
+            <img id="logo" src="Assets/logo.webp"/>
+            <h2>BookNerd</h2>
+        </div>
+        <div class="pages">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="cart.html">Cart</a>
+            <div class="auth-section" id="authSection">
+                <span id="userDisplay"></span>
+                <button id="authButton" onclick="handleAuthAction()" class="auth-btn"></button>
+            </div>
+        </div>
+    </div>
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchQuery" placeholder="Search for books..." />
+        <button onclick="searchBooks()">Search</button>
+    </div>
+
+    <!-- Book List -->
+    <div class="book-list" id="bookList"></div>
+    <div class="footer">
+        <div class="thank">
+            <h3>Thank You for visiting the store</h3>
+        </div>
+        <div class="about">
+        <ul class="mem">
+            <li><b>Members</b></li>
+            <li>Sourav Dutta</li>
+            <li>Arghyadeep Kumar</li>
+            <li>Parijat Das</li>
+            <li>Soumodeep Ghosh</li>
+            <li>Shivam Banerjee</li>
+        </ul>
+        <ul class="mem">
+            <li><b>Members</b></li>
+            <li>Sourav Dutta</li>
+            <li>Arghyadeep Kumar</li>
+            <li>Parijat Das</li>
+            <li>Soumodeep Ghosh</li>
+            <li>Shivam Banerjee</li>
+        </ul>
+        <ul class="mem">
+            <li><b>Members</b></li>
+            <li>Sourav Dutta</li>
+            <li>Arghyadeep Kumar</li>
+            <li>Parijat Das</li>
+            <li>Soumodeep Ghosh</li>
+            <li>Shivam Banerjee</li>
+        </ul>
+
+        </div>
+        <div class="rights"><h5>@All Rights Open to Use</h5></div>
+     </div>
+    <!-- JavaScript to Fetch Data and Manage Cart -->
+    <script src="shop.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

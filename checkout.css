@@ -1,0 +1,230 @@
+.checkout-container {
+    margin-top: 120px;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.order-summary {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 20px rgba(174, 173, 173, 0.886);
+}
+
+.shipping-form {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 20px rgba(174, 173, 173, 0.886);
+    margin: 25px;
+}
+
+.checkout-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    gap: 15px;
+}
+
+.checkout-item img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.total-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(117, 31, 31);
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.place-order-btn {
+    background-color: rgb(117, 31, 31);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.place-order-btn:hover {
+    background-color: rgb(147, 41, 41);
+}
+
+.payment-methods {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+}
+
+.payment-methods h3 {
+    color: rgb(117, 31, 31);
+    margin-bottom: 20px;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.payment-option {
+    position: relative;
+    flex: 1;
+    min-width: 100px;
+}
+
+.payment-option input[type="radio"] {
+    display: none;
+}
+
+.payment-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.payment-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.payment-circle span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgb(117, 31, 31);
+}
+
+.payment-label {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+/* Selected payment method styling */
+.payment-option input[type="radio"]:checked + label .payment-circle {
+    background-color: #fff;
+    border: 2px solid rgb(117, 31, 31);
+    box-shadow: 0 0 10px rgba(117, 31, 31, 0.2);
+}
+
+.payment-option input[type="radio"]:checked + label .payment-label {
+    color: rgb(117, 31, 31);
+    font-weight: 500;
+}
+
+/* Hover effect */
+.payment-circle:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+    border: 2px solid rgba(117, 31, 31, 0.5);
+}
+
+@media (max-width: 768px) {
+    .payment-options {
+        gap: 10px;
+    }
+
+    .payment-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .payment-circle span {
+        font-size: 0.8rem;
+    }
+
+    .payment-label {
+        font-size: 0.8rem;
+    }
+}
+.payment-specific-fields {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.payment-field-group {
+    margin-bottom: 15px;
+}
+
+.payment-field-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(117, 31, 31);
+    font-weight: 500;
+}
+
+.payment-field-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.card-details {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 15px;
+}
+
+.card-number {
+    grid-column: 1 / -1;
+}
+
+/* Style for secure input fields */
+.secure-input {
+    font-family: monospace;
+    letter-spacing: 0.2em;
+}
+

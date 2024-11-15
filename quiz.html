@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Assets/logo.webp">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="quiz.css">
+    <title>BookNerd/Quiz</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <div class="brand">
+            <img id="logo" src="Assets/logo.webp"/>
+            <h2>BookNerd</h2>
+        </div>
+        <div class="pages">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="cart.html">Cart</a>
+            <div class="auth-section" id="authSection">
+                <span id="userDisplay"></span>
+                <button id="authButton" onclick="handleAuthAction()" class="auth-btn"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Container -->
+    <div class="quiz-container">
+        <h1>BookNerd Quiz</h1>
+        <div id="quiz-body">
+            <!-- Quiz questions will be dynamically added here -->
+        </div>
+        <button class="submit-btn" onclick="submitQuiz()">Submit</button>
+        <div class="score-div">
+            <h4>Your Score is:</h4>
+            <h4 class="score"><!-- Score will be dynqmically added here --></h4>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="thank">
+            <h3>Thank You for visiting the store</h3>
+        </div>
+        <div class="about">
+        <ul class="mem">
+            <li><b>Members</b></li>
+            <li>Sourav Dutta</li>
+            <li>Arghyadeep Kumar</li>
+            <li>Parijat Das</li>
+            <li>Soumodeep Ghosh</li>
+            <li>Shivam Banerjee</li>
+        </ul>
+        <ul class="mem">
+            <li><b>Members</b></li>
+            <li>Sourav Dutta</li>
+            <li>Arghyadeep Kumar</li>
+            <li>Parijat Das</li>
+            <li>Soumodeep Ghosh</li>
+            <li>Shivam Banerjee</li>
+        </ul>
+        <ul class="mem">
+            <li><b>Members</b></li>
+            <li>Sourav Dutta</li>
+            <li>Arghyadeep Kumar</li>
+            <li>Parijat Das</li>
+            <li>Soumodeep Ghosh</li>
+            <li>Shivam Banerjee</li>
+        </ul>
+
+        </div>
+        <div class="rights"><h5>@All Rights Open to Use</h5></div>
+     </div>
+    <script src="auth.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

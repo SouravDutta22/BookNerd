@@ -1,0 +1,93 @@
+
+/*Search Bar*/
+.search-bar {
+    margin: 120px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    outline: none;
+}
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    padding-left: 15px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+.search-bar button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.search-bar button:hover {
+    background-color: #218838;
+}
+
+/*Book Section*/
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+.book {
+    width: calc(33.33% - 20px);
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 20px rgba(153, 152, 152, 0.604);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.book img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.book h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+.book p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+.book button {
+    padding: 8px 15px;
+    background-color: #607d8b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.book button:hover {
+    background-color: #455a64;
+}
+
+.add-btn {
+    background-color: #21ac5b;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.add-btn:hover {
+    background-color: #1c7c44;
+}
+
+.added-btn {
+    background-color: #125a30;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 15px;
+    cursor: not-allowed;
+}

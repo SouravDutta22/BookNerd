@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5e6d3;
+    padding: 20px;
+}
+
+.login-container {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(139, 69, 19, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #8B4513;
+}
+
+.logo h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.logo span {
+    color: #A0522D;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #8B4513;
+    font-weight: 500;
+}
+
+.password-container {
+    position: relative;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #DEB887;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #8B4513;
+    border-radius: 15px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #8B4513;
+    user-select: none;
+}
+
+.toggle-password:hover {
+    color: #A0522D;
+}
+
+.success-message {
+    color: #2ecc71;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+    text-align: center;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+    text-align: center;
+}
+
+.btn-login, .btn-signup {
+    width: 100%;
+    padding: 12px;
+    background: #8B4513;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 10px;
+}
+
+.btn-signup {
+    background: #DEB887;
+    color: #8B4513;
+}
+
+.btn-login:hover {
+    background: #A0522D;
+}
+
+.btn-signup:hover {
+    background: #D2B48C;
+}
+
+#loginForm, #signupForm {
+    transition: all 0.3s ease;
+}
+
+#signupForm {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+    }
+}

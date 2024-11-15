@@ -1,0 +1,93 @@
+/* Add these styles to your existing CSS file */
+
+.quiz-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f5e6d3;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(139, 69, 19, 0.1);
+}
+
+.quiz-container h1 {
+    text-align: center;
+    color: rgb(117, 31, 31);
+    margin-bottom: 2rem;
+}
+
+.quiz-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.quiz-item h3 {
+    color: #8B4513;
+    margin-bottom: 1rem;
+}
+
+.answers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.answer-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.answer-item input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #8B4513;
+    border-radius: 50%;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.answer-item input[type="radio"]:checked {
+    background-color: #8B4513;
+}
+
+.answer-item.correct label {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.answer-item.incorrect label {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.submit-btn {
+    display: block;
+    margin: 1.5rem auto 0;
+    padding: 12px 24px;
+    background-color: #23804a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #1a5b35;
+}
+.score-div{
+    height: 100px;
+    margin: 2rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #23804a;
+    color:white;
+    border-radius: 20px;
+    padding-bottom: 2rem;
+
+}

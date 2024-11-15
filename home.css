@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+body{
+    overflow-x: hidden;
+}
+/*navbar section*/
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height:15%;
+    width:100%;
+    padding: 10px;
+    background-color: beige;
+    color: rgb(117, 31, 31);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+}
+.nav .brand{
+    display: flex;
+    align-items: center;
+    
+    
+}
+#logo{
+    height: 60px;
+    width:60px;
+    margin-right: 10px;
+
+}
+.nav .pages{
+    display: flex;
+    align-items: center;
+}
+.pages a{
+    text-decoration: none;
+    color: rgb(117, 31, 31);
+    margin:12px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+a:hover{
+    color: blue;
+    transition: all ease 1s;
+}
+/*Hero Section*/
+.hero{
+    position: relative;
+    height: 100%;
+    width: 100%;  
+    background-size: cover;
+}
+.hero img{
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+.hero .text{
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    z-index: 2; 
+    background-color: transparent;
+}
+/*top books section*/
+.top {
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+
+.top .b {
+    height: 370px;
+    width: 20.5%; 
+    border-radius: 15px;
+    box-shadow: 1px 1px 20px rgba(174, 173, 173, 0.886);
+    background-size: cover;
+    padding: 12px;
+    margin: 12px;
+}
+
+.b img {
+    object-fit: cover;
+    height: 310px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.b .price {
+    display: flex;
+    justify-content: space-between;
+}
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+.footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.about {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.mem {
+    list-style-type: none;
+    text-align: left;
+}
+.mem li {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+.mem li:first-child {
+    font-weight: bold;
+}
+.mem li:hover{
+    text-decoration: underline;
+}
+.rights{
+    background-color: #484747;
+    padding:10px;
+    padding-top:12px;
+    height:40px;
+    width:100%;
+    margin-top:10px;
+    border-radius: 20px;
+}
+/*authentication*/
+
+
+.auth-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+
+#userDisplay {
+    color: #8B4513;
+    font-weight: 500;
+}
+
+.auth-btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #A0522D;
+    color: white;
+    cursor: pointer;
+    transition:  0.3s;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+.auth-btn:hover {
+    background-color: #8B4513;
+}
+
+.logout-btn {
+    background-color: #D2B48C;
+    color: #8B4513;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+.logout-btn:hover {
+    background-color: #DEB887;
+}
