@@ -187,3 +187,6 @@ a:hover{
 .logout-btn:hover {
     background-color: #DEB887;
 }
+footer a{
+  text-decoration:none;
+}
