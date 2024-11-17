@@ -3,59 +3,59 @@ const apiKey = "AIzaSyChOIwYx4pz-r5ns0b_kgHJueWR8u7kcJE";
         const maxResults = 21;  // Maximum number of books per search
         function addToCart(bookData) {
     // Check if user is logged in
-    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    if (!currentUser) {
-        window.location.href = 'login.html';
-        return;
-    }
-
-    // Get user-specific cart key
-    const cartKey = `cart_${currentUser.email}`;
-    
-    // Get existing cart or initialize empty array
-    const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
-    
-    // Add the book to cart
-    cart.push(bookData);
-    localStorage.setItem(cartKey, JSON.stringify(cart));
-    
-    // Get the button that was clicked
-    const button = event.target;
-    
-    // Update button appearance
-    button.textContent = 'Added';
-    button.classList.remove('add-btn');
-    button.classList.add('added-btn');
-    button.disabled = true;
-
-    // Optional: Add a check to disable buttons for items already in cart when page loads
-    document.addEventListener('DOMContentLoaded', checkCartItems);
-}
-
-// Function to check and update buttons for items already in cart
-function checkCartItems() {
-    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    if (!currentUser) return;
-
-    const cartKey = `cart_${currentUser.email}`;
-    const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
-    
-    // Get all add to cart buttons
-    const addButtons = document.querySelectorAll('.add-btn');
-    
-    // Check each button against cart items
-    addButtons.forEach(button => {
-        const bookData = JSON.parse(button.getAttribute('data-book'));
-        const isInCart = cart.some(item => item.id === bookData.id);
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (!currentUser) {
+                window.location.href = 'login.html';
+                return;
+            }
         
-        if (isInCart) {
+            // Get user-specific cart key
+            const cartKey = `cart_${currentUser.email}`;
+            
+            // Get existing cart or initialize empty array
+            const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+            
+            // Add the book to cart
+            cart.push(bookData);
+            localStorage.setItem(cartKey, JSON.stringify(cart));
+            
+            // Get the button that was clicked
+            const button = event.target;
+            
+            // Update button appearance
             button.textContent = 'Added';
             button.classList.remove('add-btn');
             button.classList.add('added-btn');
             button.disabled = true;
+        
+            // Optional: Add a check to disable buttons for items already in cart when page loads
+            document.addEventListener('DOMContentLoaded', checkCartItems);
         }
-    });
-}
+
+// Function to check and update buttons for items already in cart
+        function checkCartItems() {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (!currentUser) return;
+        
+            const cartKey = `cart_${currentUser.email}`;
+            const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+            
+            // Get all add to cart buttons
+            const addButtons = document.querySelectorAll('.add-btn');
+            
+            // Check each button against cart items
+            addButtons.forEach(button => {
+                const bookData = JSON.parse(button.getAttribute('data-book'));
+                const isInCart = cart.some(item => item.id === bookData.id);
+                
+                if (isInCart) {
+                    button.textContent = 'Added';
+                    button.classList.remove('add-btn');
+                    button.classList.add('added-btn');
+                    button.disabled = true;
+                }
+            });
+        }
         async function searchBooks() {
             const query = document.getElementById("searchQuery").value;
             const url = query 
