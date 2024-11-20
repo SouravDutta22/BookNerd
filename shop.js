@@ -56,6 +56,7 @@ const apiKey = "AIzaSyChOIwYx4pz-r5ns0b_kgHJueWR8u7kcJE";
                 }
             });
         }
+//you can search a book , using the google books api
         async function searchBooks() {
             const query = document.getElementById("searchQuery").value;
             const url = query 
@@ -73,7 +74,7 @@ const apiKey = "AIzaSyChOIwYx4pz-r5ns0b_kgHJueWR8u7kcJE";
         }
 
         
-
+//display the books in shop body
         function displayBooks(books) {
             const bookList = document.getElementById("bookList");
             bookList.innerHTML = "";  // Clear previous results
@@ -91,6 +92,7 @@ const apiKey = "AIzaSyChOIwYx4pz-r5ns0b_kgHJueWR8u7kcJE";
                 const price = book.saleInfo && book.saleInfo.listPrice ? book.saleInfo.listPrice.amount : 220.00;
                 const bookDiv = document.createElement("div");
                 bookDiv.className = "book";
+                    //html to present the book data
                 bookDiv.innerHTML = `
                     <img src="${thumbnail}" alt="${title}" />
                     <h3>${title}</h3>
