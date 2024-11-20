@@ -39,7 +39,7 @@ const apiKey = "AIzaSyChOIwYx4pz-r5ns0b_kgHJueWR8u7kcJE";
                 bookDiv.className = "book";
                     //html to present the book data
                 bookDiv.innerHTML = `
-                    <img src="${thumbnail}" alt="${title}" />
+                    <img src="${thumbnail}" alt="" />
                     <h3>${title}</h3>
                     <p>Author: ${authors}</p>
                     <p>Price: ₹${price.toFixed(2)}</p>
