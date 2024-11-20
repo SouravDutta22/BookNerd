@@ -1,7 +1,59 @@
 const apiKey = "AIzaSyChOIwYx4pz-r5ns0b_kgHJueWR8u7kcJE";
         let startIndex = 0;
         const maxResults = 21;  // Maximum number of books per search
-        function addToCart(bookData) {
+//you can search a book , using the google books api
+        async function searchBooks() {
+            const query = document.getElementById("searchQuery").value;
+            const url = query 
+                ? `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}&maxResults=${maxResults}&startIndex=${startIndex}`
+                : `https://www.googleapis.com/books/v1/volumes?q=NewReleaseBooks&key=${apiKey}&maxResults=${maxResults}`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                displayBooks(data.items);
+            } catch (error) {
+                console.error("Error fetching books:", error);
+                alert("Failed to fetch books. Please try again.");
+            }
+        }
+
+        
+//display the books in shop body
+        function displayBooks(books) {
+            const bookList = document.getElementById("bookList");
+            bookList.innerHTML = "";  // Clear previous results
+
+            if (!books || books.length === 0) {
+                bookList.innerHTML = "<h2>No books found.</h2>";
+                return;
+            }
+
+            books.forEach(book => {
+                const bookInfo = book.volumeInfo;
+                const thumbnail = bookInfo.imageLinks ? bookInfo.imageLinks.thumbnail : "Assets/content.jpeg";
+                const title = bookInfo.title || "No title available";
+                const authors = bookInfo.authors ? bookInfo.authors.join(", ") : "Donald Knuth";
+                const price = book.saleInfo && book.saleInfo.listPrice ? book.saleInfo.listPrice.amount : 220.00;
+                const bookDiv = document.createElement("div");
+                bookDiv.className = "book";
+                    //html to present the book data
+                bookDiv.innerHTML = `
+                    <img src="${thumbnail}" alt="${title}" />
+                    <h3>${title}</h3>
+                    <p>Author: ${authors}</p>
+                    <p>Price: ₹${price.toFixed(2)}</p>
+                    <button class="add-btn" onclick='addToCart({
+                        "title": "${title.replace(/"/g, '&quot;')}",
+                        "author": "${authors.replace(/"/g, '&quot;')}",
+                        "thumbnail": "${thumbnail}",
+                        "price": ${price}
+                    })'>Add to Cart</button>
+                `;
+                bookList.appendChild(bookDiv);
+            });
+        }
+    function addToCart(bookData) {
     // Check if user is logged in
             const currentUser = JSON.parse(localStorage.getItem('currentUser'));
             if (!currentUser) {
@@ -54,58 +106,6 @@ const apiKey = "AIzaSyChOIwYx4pz-r5ns0b_kgHJueWR8u7kcJE";
                     button.classList.add('added-btn');
                     button.disabled = true;
                 }
-            });
-        }
-//you can search a book , using the google books api
-        async function searchBooks() {
-            const query = document.getElementById("searchQuery").value;
-            const url = query 
-                ? `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}&maxResults=${maxResults}&startIndex=${startIndex}`
-                : `https://www.googleapis.com/books/v1/volumes?q=NewReleaseBooks&key=${apiKey}&maxResults=${maxResults}`;
-
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-                displayBooks(data.items);
-            } catch (error) {
-                console.error("Error fetching books:", error);
-                alert("Failed to fetch books. Please try again.");
-            }
-        }
-
-        
-//display the books in shop body
-        function displayBooks(books) {
-            const bookList = document.getElementById("bookList");
-            bookList.innerHTML = "";  // Clear previous results
-
-            if (!books || books.length === 0) {
-                bookList.innerHTML = "<h2>No books found.</h2>";
-                return;
-            }
-
-            books.forEach(book => {
-                const bookInfo = book.volumeInfo;
-                const thumbnail = bookInfo.imageLinks ? bookInfo.imageLinks.thumbnail : "Assets/content.jpeg";
-                const title = bookInfo.title || "No title available";
-                const authors = bookInfo.authors ? bookInfo.authors.join(", ") : "Donald Knuth";
-                const price = book.saleInfo && book.saleInfo.listPrice ? book.saleInfo.listPrice.amount : 220.00;
-                const bookDiv = document.createElement("div");
-                bookDiv.className = "book";
-                    //html to present the book data
-                bookDiv.innerHTML = `
-                    <img src="${thumbnail}" alt="${title}" />
-                    <h3>${title}</h3>
-                    <p>Author: ${authors}</p>
-                    <p>Price: ₹${price.toFixed(2)}</p>
-                    <button class="add-btn" onclick='addToCart({
-                        "title": "${title.replace(/"/g, '&quot;')}",
-                        "author": "${authors.replace(/"/g, '&quot;')}",
-                        "thumbnail": "${thumbnail}",
-                        "price": ${price}
-                    })'>Add to Cart</button>
-                `;
-                bookList.appendChild(bookDiv);
             });
         }
       
