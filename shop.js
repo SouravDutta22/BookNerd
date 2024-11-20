@@ -53,6 +53,7 @@ const apiKey = "AIzaSyChOIwYx4pz-r5ns0b_kgHJueWR8u7kcJE";
                 bookList.appendChild(bookDiv);
             });
         }
+//add items in cart
     function addToCart(bookData) {
     // Check if user is logged in
             const currentUser = JSON.parse(localStorage.getItem('currentUser'));
