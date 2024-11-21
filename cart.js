@@ -73,12 +73,11 @@ function removeFromCart(index, itemPrice) {
 }
 
 // Function to handle checkout
-// In your cart.js file, replace the checkout function with:
 function checkout() {
     const currentUser = checkLogin();
     if (!currentUser) return;
 
-    // Instead of clearing the cart, redirect to checkout page
+    // redirect to checkout page
     window.location.href = 'checkout.html';
 }
 // Load cart items when page loads
