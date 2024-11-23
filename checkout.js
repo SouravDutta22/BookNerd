@@ -40,13 +40,13 @@ function displayCheckoutItems() {
             <div class="item-info">
                 <h3>${item.title}</h3>
                 <p>Author: ${item.author}</p>
-                <p>Price: ₹${item.price.toFixed(2)}</p>
+                <p>Price: ₹${item.price.toFixed(0)}</p>
             </div>
         `;
         checkoutContainer.appendChild(checkoutItem);
     });
 
-    document.getElementById('checkoutTotal').textContent = total.toFixed(2);
+    document.getElementById('checkoutTotal').textContent = total.toFixed(0);
 }
 
 // Calculate delivery date (current date + 4 days)
