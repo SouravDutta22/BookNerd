@@ -46,7 +46,7 @@ function displayCartItems() {
             <div class="item-details">
                 <h3>${item.title}</h3>
                 <p>Author: ${item.author}</p>
-                <p>Price: ₹${item.price.toFixed(2)}</p>
+                <p>Price: ₹${item.price.toFixed(0)}</p>
             </div>
             <div class="item-actions">
                 <button class="remove-btn" onclick="removeFromCart(${index}, ${item.price})">Remove</button>
@@ -55,7 +55,7 @@ function displayCartItems() {
         cartContainer.appendChild(cartItem);
     });
 
-    document.getElementById('totalAmount').textContent = total.toFixed(2);
+    document.getElementById('totalAmount').textContent = total.toFixed(0);
 }
 
 // Function to remove item from cart
