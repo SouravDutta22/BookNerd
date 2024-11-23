@@ -30,6 +30,10 @@ body{
     
     
 }
+.nav a{
+    text-decoration: none;
+    color: rgb(117, 31, 31);
+}
 #logo{
     height: 60px;
     width:60px;
