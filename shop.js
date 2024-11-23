@@ -6,7 +6,7 @@ const apiKey = "AIzaSyChOIwYx4pz-r5ns0b_kgHJueWR8u7kcJE";
             const query = document.getElementById("searchQuery").value;
             const url = query 
                 ? `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}&maxResults=${maxResults}&startIndex=${startIndex}`
-                : `https://www.googleapis.com/books/v1/volumes?q=New&key=${apiKey}&maxResults=${maxResults}`;
+                : `https://www.googleapis.com/books/v1/volumes?q=bestsellerbooks&key=${apiKey}&maxResults=${maxResults}`;
 
             try {
                 const response = await fetch(url);
