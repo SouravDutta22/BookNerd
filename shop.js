@@ -42,7 +42,7 @@ const apiKey = "AIzaSyChOIwYx4pz-r5ns0b_kgHJueWR8u7kcJE";
                     <img src="${thumbnail}" alt="" />
                     <h3>${title}</h3>
                     <p>Author: ${authors}</p>
-                    <p>Price: ₹${price.toFixed(2)}</p>
+                    <p>Price: ₹${price.toFixed(0)}</p>
                     <button class="add-btn" onclick='addToCart({
                         "title": "${title.replace(/"/g, '&quot;')}",
                         "author": "${authors.replace(/"/g, '&quot;')}",
