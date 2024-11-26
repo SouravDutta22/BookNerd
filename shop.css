@@ -91,3 +91,43 @@
     border-radius: 15px;
     cursor: not-allowed;
 }
+/* Responsive Media Queries for Shop Page */
+@media (max-width: 1200px) {
+    .book {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 992px) {
+    .search-bar input {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .search-bar input {
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .search-bar button {
+        width: 90%;
+    }
+    
+    .book {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .search-bar input,
+    .search-bar button {
+        font-size: 0.9rem;
+    }
+}
