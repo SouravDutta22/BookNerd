@@ -193,69 +193,75 @@ a:hover{
 .logout-btn:hover {
     background-color: #DEB887;
 }
+/* Media Queries */
 @media (max-width: 1200px) {
-.top .b {
-width: 30%;
-}
-}
-@media (max-width: 992px) {
-.nav .pages a {
-font-size: 1.1rem;
-margin: 10px;
-}
-.hero .text {
-font-size: 3.5rem;
-}
-.top .b {
-width: 45%;
-}
-}
-@media (max-width: 768px) {
-.nav {
-height: auto;
-padding: 10px 20px;
-}
-.nav .brand {
-flex-direction: column;
-align-items: flex-start;
-}
-#logo {
-height: 50px;
-width: 50px;
-margin-right: 5px;
-}
-.nav .pages {
-flex-wrap: wrap;
-justify-content: center;
-}
-.nav .pages a {
-font-size: 1rem;
-margin: 8px;
-}
-.hero img {
-height: 500px;
-}
-.hero .text {
-font-size: 3rem;
-}
-.top .b {
-width: 100%;
-}
-}
-@media (max-width: 576px) {
-.hero img {
-height: 400px;
-}
-.hero .text {
-font-size: 2.5rem;
-}
-.about {
-flex-direction: column;
-align-items: center;
-}
-.mem {
-text-align: center;
-margin-bottom: 10px;
-}
+    .top .b {
+        width: 30%;
+    }
 }
 
+@media (max-width: 992px) {
+    .nav .pages a {
+        font-size: 1.1rem;
+        margin: 10px;
+    }
+    .hero .text {
+        font-size: 3.5rem;
+    }
+    .top .b {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        height: auto;
+        padding: 10px 20px;
+        flex-direction: column;
+    }
+    .nav .brand {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+    #logo {
+        height: 50px;
+        width: 50px;
+        margin-bottom: 10px;
+    }
+    .nav .pages {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav .pages a {
+        font-size: 1rem;
+        margin: 8px;
+    }
+    .hero img {
+        height: 500px;
+    }
+    .hero .text {
+        font-size: 3rem;
+    }
+    .top .b {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero img {
+        height: 400px;
+    }
+    .hero .text {
+        font-size: 2.5rem;
+    }
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+    .mem {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
