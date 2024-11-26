@@ -193,7 +193,6 @@ a:hover{
 .logout-btn:hover {
     background-color: #DEB887;
 }
-/* Media Queries */
 @media (max-width: 1200px) {
 .top .b {
 width: 30%;
