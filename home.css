@@ -100,7 +100,7 @@ a:hover{
 
 .b img {
     object-fit: cover;
-    height: 110px;
+    height: 250px;
     width: 100%;
     border-radius: 10px;
 }
