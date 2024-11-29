@@ -94,13 +94,13 @@ a:hover{
     border-radius: 15px;
     box-shadow: 1px 1px 20px rgba(174, 173, 173, 0.886);
     background-size: cover;
-    padding: 12px;
+    padding: 20px;
     margin: 12px;
 }
 
 .b img {
     object-fit: cover;
-    height: 250px;
+    height: 300px;
     width: 100%;
     border-radius: 10px;
 }
