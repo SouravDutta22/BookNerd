@@ -1,5 +1,3 @@
-// auth.js - Include this in all pages after the existing scripts
-
 // Check authentication status
 function checkAuth() {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
